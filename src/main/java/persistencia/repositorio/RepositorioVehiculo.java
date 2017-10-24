@@ -1,5 +1,6 @@
 package persistencia.repositorio;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -32,6 +33,16 @@ public class RepositorioVehiculo implements IRepositorioVehiculo{
 			vehiculo = vehiculoLista.get(0);
 		
 		return vehiculo;
+	}
+
+	public List<Vehiculo> listaVehiculos() {
+		List<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
+		
+		TypedQuery<Vehiculo> query = this.entityManager
+			.createQuery("SELECT vehiculo FROM Vehiculo vehiculo", Vehiculo.class);
+	
+		vehiculos = query.getResultList();
+		return vehiculos;
 	}
 
 }
