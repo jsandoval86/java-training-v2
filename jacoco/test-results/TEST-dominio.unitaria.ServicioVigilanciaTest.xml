@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dominio.unitaria.ServicioVigilanciaTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-10-26T16:43:50" hostname="JUAN-SANDOVAL" time="0.554">
+  <properties/>
+  <testcase name="DenegarIngresoAVehiculoConPlacaIniciadaConAYDiaNoHabil" classname="dominio.unitaria.ServicioVigilanciaTest" time="0.478"/>
+  <testcase name="DenegarIngresoSiVehiculoYaFueIngresado" classname="dominio.unitaria.ServicioVigilanciaTest" time="0.051"/>
+  <testcase name="DenegarIngresoAVehiculoPorCupoLleno" classname="dominio.unitaria.ServicioVigilanciaTest" time="0.024"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

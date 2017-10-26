@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dominio.integracion.ServicioVigilanciaTest" tests="2" skipped="0" failures="2" errors="0" timestamp="2017-10-26T16:43:49" hostname="JUAN-SANDOVAL" time="1.422">
+  <properties/>
+  <testcase name="registrarUnVehiculo" classname="dominio.integracion.ServicioVigilanciaTest" time="1.351">
+    <failure message="org.hibernate.AnnotationException: @OneToOne or @ManyToOne on dominio.Vehiculo.tipo references an unknown entity: dominio.Tipo" type="org.hibernate.AnnotationException">org.hibernate.AnnotationException: @OneToOne or @ManyToOne on dominio.Vehiculo.tipo references an unknown entity: dominio.Tipo
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:97)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1752)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1696)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1583)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:858)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:885)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:58)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
+	at persistencia.conexion.ConexionJPA.&lt;init&gt;(ConexionJPA.java:13)
+	at persistencia.sistema.SistemaPersistencia.&lt;init&gt;(SistemaPersistencia.java:17)
+	at dominio.integracion.ServicioVigilanciaTest.setup(ServicioVigilanciaTest.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+    <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
+	at dominio.integracion.ServicioVigilanciaTest.tearDown(ServicioVigilanciaTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+  </testcase>
+  <testcase name="registrarUnVehiculoConPlacaIniciadaConAEnDiaHabil" classname="dominio.integracion.ServicioVigilanciaTest" time="0.071">
+    <failure message="org.hibernate.AnnotationException: @OneToOne or @ManyToOne on dominio.Vehiculo.tipo references an unknown entity: dominio.Tipo" type="org.hibernate.AnnotationException">org.hibernate.AnnotationException: @OneToOne or @ManyToOne on dominio.Vehiculo.tipo references an unknown entity: dominio.Tipo
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:97)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1752)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1696)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1583)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:858)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:885)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:58)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:39)
+	at persistencia.conexion.ConexionJPA.&lt;init&gt;(ConexionJPA.java:13)
+	at persistencia.sistema.SistemaPersistencia.&lt;init&gt;(SistemaPersistencia.java:17)
+	at dominio.integracion.ServicioVigilanciaTest.setup(ServicioVigilanciaTest.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+    <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
+	at dominio.integracion.ServicioVigilanciaTest.tearDown(ServicioVigilanciaTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+  </testcase>
+  <system-out><![CDATA[11:43:49.310 [Test worker] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+11:43:49.455 [Test worker] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Located and parsed 1 persistence units; checking each
+11:43:49.455 [Test worker] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Checking persistence-unit [name=parqueadero_v2, explicit-provider=null] against incoming persistence unit name [parqueadero_v2]
+11:43:49.457 [Test worker] DEBUG org.hibernate.jpa.boot.spi.ProviderChecker - No PersistenceProvider explicitly requested, assuming Hibernate
+11:43:49.468 [Test worker] DEBUG org.hibernate.jpa.internal.util.LogHelper - PersistenceUnitInfo [
+	name: parqueadero_v2
+	persistence provider classname: null
+	classloader: null
+	excludeUnlistedClasses: false
+	JTA datasource: null
+	Non JTA datasource: null
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/D:/eclipse/workspace/IntroduccionADNCeibaV2.0/build/resources/main/
+	Shared Cache Mode: null
+	Validation Mode: null
+	Jar files URLs []
+	Managed classes names [
+		dominio.Registro
+		dominio.Parqueadero
+		dominio.Vehiculo]
+	Mapping files names []
+	Properties [
+		javax.persistence.jdbc.driver: com.mysql.jdbc.Driver
+		javax.persistence.jdbc.password: Kurz1029
+		javax.persistence.jdbc.url: jdbc:mysql://localhost:3306/adnceibav2
+		hibernate.dialect: org.hibernate.dialect.MySQL57Dialect
+		hibernate.show_sql: true
+		hibernate.hbm2ddl.auto: update
+		javax.persistence.jdbc.user: root]
+11:43:49.482 [Test worker] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+11:43:49.485 [Test worker] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+11:43:49.487 [Test worker] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+11:43:49.487 [Test worker] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.jpa.event.spi.JpaIntegrator].
+11:43:49.604 [Test worker] INFO org.hibernate.Version - HHH000412: Hibernate Core {5.2.11.Final}
+11:43:49.604 [Test worker] INFO org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+11:43:49.619 [Test worker] DEBUG org.hibernate.service.spi.ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+11:43:49.664 [Test worker] DEBUG org.hibernate.cache.internal.RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+11:43:49.675 [Test worker] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+11:43:49.702 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@4bf2e2a
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@4bf2e2a
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@4bf2e2a
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@3e46afb7
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@7348befe
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@6b9a25e5
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@738a8156
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@738a8156
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@738a8156
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@3f479df
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@3f479df
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@3f479df
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@57d43121
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@57d43121
+11:43:49.718 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@57d43121
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@47b64dc5
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@47b64dc5
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@47b64dc5
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@333f8f6e
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@333f8f6e
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@333f8f6e
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@701faf18
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@701faf18
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@701faf18
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@2745b452
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@2745b452
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@2745b452
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@1fc1cc62
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@1fc1cc62
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@35ca1e1f
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@35ca1e1f
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@29ef6ffc
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@29ef6ffc
+11:43:49.734 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@10db38e1
+11:43:49.750 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@5ba2e621
+11:43:49.753 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@4ffc74c9
+11:43:49.753 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@4ffc74c9
+11:43:49.755 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@2d680ee3
+11:43:49.755 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@2d680ee3
+11:43:49.768 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@221e6878
+11:43:49.768 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@221e6878
+11:43:49.770 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@2652457
+11:43:49.770 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@2652457
+11:43:49.773 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@6af3aa15
+11:43:49.773 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@6af3aa15
+11:43:49.775 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@6ad1f8b5
+11:43:49.775 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@6ad1f8b5
+11:43:49.777 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2d5ff2be
+11:43:49.777 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2d5ff2be
+11:43:49.779 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@2480fabf
+11:43:49.779 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@2480fabf
+11:43:49.782 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2eeeef3a
+11:43:49.782 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2eeeef3a
+11:43:49.785 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@5740fee8
+11:43:49.785 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@5740fee8
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@70c049df
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@70c049df
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@a9a4c66
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@a9a4c66
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@a9a4c66
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@161f355e
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@1a10c1e7
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@1a10c1e7
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@1a10c1e7
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@43e82df8
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@5788c969
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@5788c969
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@6cfe3e92
+11:43:49.787 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@6cfe3e92
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@19a307a0
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@19a307a0
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@777624f7
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@777624f7
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@4145ac58
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@4145ac58
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@1a5e479a
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@486943d7
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@486943d7
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@486943d7
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@1dc1ff05
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@1dc1ff05
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@1dc1ff05
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@9b2cc08
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@2a0b0164
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@39361602
+11:43:49.802 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@39361602
+11:43:49.818 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@39361602
+11:43:49.818 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@7d64ca7c
+11:43:49.818 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@7d64ca7c
+11:43:49.818 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@7d64ca7c
+11:43:49.818 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@2dd8e79e
+11:43:49.818 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@2fceea43
+11:43:49.818 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@29b5adf3
+11:43:49.818 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@29b5adf3
+11:43:49.818 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@4a2ad35b
+11:43:49.834 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@3f569025
+11:43:49.834 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@3f569025
+11:43:49.834 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@38565c42
+11:43:49.834 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@38565c42
+11:43:49.834 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@601ec319
+11:43:49.834 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@714799d6
+11:43:49.834 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@43a60431
+11:43:49.849 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@47e6e0fc
+11:43:49.849 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@47e6e0fc
+11:43:49.850 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@63782612
+11:43:49.850 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@50a5e406
+11:43:49.851 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@162ae789
+11:43:49.851 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@4b32fd02
+11:43:49.851 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@69d80ac0
+11:43:49.851 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@16a24629
+11:43:49.851 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@5775fddb
+11:43:49.851 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@b73d0da
+11:43:49.866 [Test worker] WARN org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+11:43:49.875 [Test worker] INFO org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/adnceibav2]
+11:43:49.876 [Test worker] INFO org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=Kurz1029}
+11:43:49.876 [Test worker] INFO org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+11:43:49.880 [Test worker] DEBUG org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Initializing Connection pool with 1 Connections
+11:43:49.880 [Test worker] INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+11:43:50.155 [Test worker] DEBUG org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - Database ->
+       name : MySQL
+    version : 5.7.20-log
+      major : 5
+      minor : 7
+11:43:50.155 [Test worker] DEBUG org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - Driver ->
+       name : MySQL-AB JDBC Driver
+    version : mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )
+      major : 5
+      minor : 1
+11:43:50.155 [Test worker] DEBUG org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - JDBC version : 3.0
+11:43:50.173 [Test worker] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+11:43:50.201 [Test worker] DEBUG org.hibernate.engine.jdbc.env.spi.IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in more than one case
+11:43:50.217 [Test worker] DEBUG org.hibernate.engine.jdbc.env.spi.IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [LOWER]; that will likely lead to problems in schema update and validation if using quoted identifiers
+11:43:50.258 [Test worker] INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+11:43:50.285 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+11:43:50.285 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+11:43:50.301 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+11:43:50.301 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+11:43:50.301 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+11:43:50.301 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+11:43:50.301 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+11:43:50.301 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+11:43:50.301 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+11:43:50.301 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+11:43:50.301 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+11:43:50.301 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+11:43:50.301 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+11:43:50.301 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+11:43:50.375 [Test worker] DEBUG org.hibernate.boot.model.relational.Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+11:43:50.402 [Test worker] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: dominio.Registro
+11:43:50.433 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+11:43:50.433 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Import with entity name Registro
+11:43:50.452 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Bind entity dominio.Registro on table registro
+11:43:50.483 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(registro), mappingColumn=id, insertable=true, updatable=true, unique=false}
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Registro:id]
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for id
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property id
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(registro), mappingColumn=fecha_ingreso, insertable=true, updatable=true, unique=false}
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property fechaIngreso with lazy=false
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Registro:fechaIngreso]
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for fechaIngreso
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property fechaIngreso
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(registro), mappingColumn=fecha_salida, insertable=true, updatable=true, unique=false}
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property fechaSalida with lazy=false
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Registro:fechaSalida]
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for fechaSalida
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property fechaSalida
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='parqueadero_id', referencedColumn='id', mappedBy=''}
+11:43:50.485 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(registro), mappingColumn=parqueadero, insertable=true, updatable=true, unique=false}
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property parqueadero
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='vehiculo_placa', referencedColumn='placa', mappedBy=''}
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(registro), mappingColumn=vehiculo, insertable=true, updatable=true, unique=false}
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property vehiculo
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: dominio.Parqueadero
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Import with entity name Parqueadero
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Bind entity dominio.Parqueadero on table parqueadero
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(parqueadero), mappingColumn=id, insertable=true, updatable=true, unique=false}
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Parqueadero:id]
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for id
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property id
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(parqueadero), mappingColumn=num_carros_permitidos, insertable=true, updatable=true, unique=false}
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property numCarrosPermitidos with lazy=false
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Parqueadero:numCarrosPermitidos]
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for numCarrosPermitidos
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property numCarrosPermitidos
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(parqueadero), mappingColumn=num_motos_permitidos, insertable=true, updatable=true, unique=false}
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property numeroMotosPermitidos with lazy=false
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Parqueadero:numeroMotosPermitidos]
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for numeroMotosPermitidos
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property numeroMotosPermitidos
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: dominio.Vehiculo
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Import with entity name Vehiculo
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Bind entity dominio.Vehiculo on table vehiculo
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(vehiculo), mappingColumn=placa, insertable=true, updatable=true, unique=false}
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property placa with lazy=false
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Vehiculo:placa]
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for placa
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property placa
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(vehiculo), mappingColumn=cilindraje, insertable=true, updatable=true, unique=false}
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property cilindraje with lazy=false
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Vehiculo:cilindraje]
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for cilindraje
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property cilindraje
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='tipo_vehiculo_id', referencedColumn='id', mappedBy=''}
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(vehiculo), mappingColumn=tipo, insertable=true, updatable=true, unique=false}
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property tipo
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for fechaIngreso
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for fechaSalida
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for numCarrosPermitidos
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for numeroMotosPermitidos
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for placa
+11:43:50.500 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for cilindraje
+11:43:50.516 [Test worker] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Located and parsed 1 persistence units; checking each
+11:43:50.516 [Test worker] DEBUG org.hibernate.jpa.HibernatePersistenceProvider - Checking persistence-unit [name=parqueadero_v2, explicit-provider=null] against incoming persistence unit name [parqueadero_v2]
+11:43:50.516 [Test worker] DEBUG org.hibernate.jpa.boot.spi.ProviderChecker - No PersistenceProvider explicitly requested, assuming Hibernate
+11:43:50.516 [Test worker] DEBUG org.hibernate.jpa.internal.util.LogHelper - PersistenceUnitInfo [
+	name: parqueadero_v2
+	persistence provider classname: null
+	classloader: null
+	excludeUnlistedClasses: false
+	JTA datasource: null
+	Non JTA datasource: null
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/D:/eclipse/workspace/IntroduccionADNCeibaV2.0/build/resources/main/
+	Shared Cache Mode: null
+	Validation Mode: null
+	Jar files URLs []
+	Managed classes names [
+		dominio.Registro
+		dominio.Parqueadero
+		dominio.Vehiculo]
+	Mapping files names []
+	Properties [
+		javax.persistence.jdbc.driver: com.mysql.jdbc.Driver
+		javax.persistence.jdbc.password: Kurz1029
+		javax.persistence.jdbc.url: jdbc:mysql://localhost:3306/adnceibav2
+		hibernate.dialect: org.hibernate.dialect.MySQL57Dialect
+		hibernate.show_sql: true
+		hibernate.hbm2ddl.auto: update
+		javax.persistence.jdbc.user: root]
+11:43:50.516 [Test worker] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+11:43:50.516 [Test worker] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+11:43:50.516 [Test worker] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+11:43:50.516 [Test worker] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.jpa.event.spi.JpaIntegrator].
+11:43:50.532 [Test worker] DEBUG org.hibernate.service.spi.ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+11:43:50.532 [Test worker] DEBUG org.hibernate.cache.internal.RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@4bf2e2a
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@4bf2e2a
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@4bf2e2a
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@3e46afb7
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@7348befe
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@6b9a25e5
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@738a8156
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@738a8156
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@738a8156
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@3f479df
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@3f479df
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@3f479df
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@57d43121
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@57d43121
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@57d43121
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@47b64dc5
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@47b64dc5
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@47b64dc5
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@333f8f6e
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@333f8f6e
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@333f8f6e
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@701faf18
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@701faf18
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@701faf18
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@2745b452
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@2745b452
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@2745b452
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@1fc1cc62
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@1fc1cc62
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@35ca1e1f
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@35ca1e1f
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@29ef6ffc
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@29ef6ffc
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@10db38e1
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@5ba2e621
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@4ffc74c9
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@4ffc74c9
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@2d680ee3
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@2d680ee3
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@221e6878
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@221e6878
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@2652457
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@2652457
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@6af3aa15
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@6af3aa15
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@6ad1f8b5
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@6ad1f8b5
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2d5ff2be
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2d5ff2be
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@2480fabf
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@2480fabf
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2eeeef3a
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@2eeeef3a
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@5740fee8
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@5740fee8
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@70c049df
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@70c049df
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@a9a4c66
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@a9a4c66
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@a9a4c66
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@161f355e
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@1a10c1e7
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@1a10c1e7
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@1a10c1e7
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@43e82df8
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@5788c969
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@5788c969
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@6cfe3e92
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@6cfe3e92
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@19a307a0
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@19a307a0
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@777624f7
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@777624f7
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@4145ac58
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@4145ac58
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@1a5e479a
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@486943d7
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@486943d7
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@486943d7
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@1dc1ff05
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@1dc1ff05
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@1dc1ff05
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@9b2cc08
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@2a0b0164
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@39361602
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@39361602
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@39361602
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@7d64ca7c
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@7d64ca7c
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@7d64ca7c
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@2dd8e79e
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@2fceea43
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@29b5adf3
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@29b5adf3
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@4a2ad35b
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@3f569025
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@3f569025
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@38565c42
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@38565c42
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@601ec319
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@714799d6
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@43a60431
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@47e6e0fc
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@47e6e0fc
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@260e35c7
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@17653fe7
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@1a7d7e5d
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@d15aaaa
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@5ae206c2
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@64c6907e
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1538952d
+11:43:50.532 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@35d83dda
+11:43:50.532 [Test worker] WARN org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+11:43:50.532 [Test worker] INFO org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/adnceibav2]
+11:43:50.532 [Test worker] INFO org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=Kurz1029}
+11:43:50.532 [Test worker] INFO org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+11:43:50.532 [Test worker] DEBUG org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Initializing Connection pool with 1 Connections
+11:43:50.532 [Test worker] INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+11:43:50.563 [Test worker] DEBUG org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - Database ->
+       name : MySQL
+    version : 5.7.20-log
+      major : 5
+      minor : 7
+11:43:50.563 [Test worker] DEBUG org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - Driver ->
+       name : MySQL-AB JDBC Driver
+    version : mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )
+      major : 5
+      minor : 1
+11:43:50.563 [Test worker] DEBUG org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - JDBC version : 3.0
+11:43:50.563 [Test worker] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+11:43:50.568 [Test worker] DEBUG org.hibernate.engine.jdbc.env.spi.IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in more than one case
+11:43:50.570 [Test worker] DEBUG org.hibernate.engine.jdbc.env.spi.IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [LOWER]; that will likely lead to problems in schema update and validation if using quoted identifiers
+11:43:50.572 [Test worker] INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+11:43:50.573 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+11:43:50.573 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+11:43:50.573 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+11:43:50.573 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+11:43:50.574 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+11:43:50.574 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+11:43:50.574 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+11:43:50.574 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+11:43:50.574 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+11:43:50.574 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+11:43:50.574 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+11:43:50.574 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+11:43:50.574 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+11:43:50.574 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+11:43:50.574 [Test worker] DEBUG org.hibernate.boot.model.relational.Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+11:43:50.575 [Test worker] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: dominio.Registro
+11:43:50.575 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+11:43:50.575 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Import with entity name Registro
+11:43:50.575 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Bind entity dominio.Registro on table registro
+11:43:50.576 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(registro), mappingColumn=id, insertable=true, updatable=true, unique=false}
+11:43:50.576 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+11:43:50.577 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Registro:id]
+11:43:50.577 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for id
+11:43:50.577 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property id
+11:43:50.577 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(registro), mappingColumn=fecha_ingreso, insertable=true, updatable=true, unique=false}
+11:43:50.577 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property fechaIngreso with lazy=false
+11:43:50.577 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Registro:fechaIngreso]
+11:43:50.577 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for fechaIngreso
+11:43:50.578 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property fechaIngreso
+11:43:50.578 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(registro), mappingColumn=fecha_salida, insertable=true, updatable=true, unique=false}
+11:43:50.578 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property fechaSalida with lazy=false
+11:43:50.578 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Registro:fechaSalida]
+11:43:50.579 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for fechaSalida
+11:43:50.579 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property fechaSalida
+11:43:50.579 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='parqueadero_id', referencedColumn='id', mappedBy=''}
+11:43:50.579 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(registro), mappingColumn=parqueadero, insertable=true, updatable=true, unique=false}
+11:43:50.579 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property parqueadero
+11:43:50.580 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='vehiculo_placa', referencedColumn='placa', mappedBy=''}
+11:43:50.580 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(registro), mappingColumn=vehiculo, insertable=true, updatable=true, unique=false}
+11:43:50.580 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property vehiculo
+11:43:50.580 [Test worker] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: dominio.Parqueadero
+11:43:50.580 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+11:43:50.581 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Import with entity name Parqueadero
+11:43:50.581 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Bind entity dominio.Parqueadero on table parqueadero
+11:43:50.582 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(parqueadero), mappingColumn=id, insertable=true, updatable=true, unique=false}
+11:43:50.582 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
+11:43:50.582 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Parqueadero:id]
+11:43:50.582 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for id
+11:43:50.582 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property id
+11:43:50.583 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(parqueadero), mappingColumn=num_carros_permitidos, insertable=true, updatable=true, unique=false}
+11:43:50.583 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property numCarrosPermitidos with lazy=false
+11:43:50.583 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Parqueadero:numCarrosPermitidos]
+11:43:50.583 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for numCarrosPermitidos
+11:43:50.583 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property numCarrosPermitidos
+11:43:50.584 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(parqueadero), mappingColumn=num_motos_permitidos, insertable=true, updatable=true, unique=false}
+11:43:50.584 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property numeroMotosPermitidos with lazy=false
+11:43:50.584 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Parqueadero:numeroMotosPermitidos]
+11:43:50.584 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for numeroMotosPermitidos
+11:43:50.584 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property numeroMotosPermitidos
+11:43:50.585 [Test worker] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: dominio.Vehiculo
+11:43:50.585 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+11:43:50.585 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Import with entity name Vehiculo
+11:43:50.585 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Bind entity dominio.Vehiculo on table vehiculo
+11:43:50.586 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(vehiculo), mappingColumn=placa, insertable=true, updatable=true, unique=false}
+11:43:50.586 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property placa with lazy=false
+11:43:50.586 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Vehiculo:placa]
+11:43:50.587 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for placa
+11:43:50.587 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property placa
+11:43:50.587 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(vehiculo), mappingColumn=cilindraje, insertable=true, updatable=true, unique=false}
+11:43:50.587 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property cilindraje with lazy=false
+11:43:50.587 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [dominio.Vehiculo:cilindraje]
+11:43:50.587 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for cilindraje
+11:43:50.587 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property cilindraje
+11:43:50.588 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3JoinColumn{logicalColumnName='tipo_vehiculo_id', referencedColumn='id', mappedBy=''}
+11:43:50.588 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(vehiculo), mappingColumn=tipo, insertable=true, updatable=true, unique=false}
+11:43:50.588 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property tipo
+11:43:50.589 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+11:43:50.589 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for fechaIngreso
+11:43:50.589 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for fechaSalida
+11:43:50.589 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for id
+11:43:50.589 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for numCarrosPermitidos
+11:43:50.589 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for numeroMotosPermitidos
+11:43:50.590 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for placa
+11:43:50.590 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for cilindraje
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
